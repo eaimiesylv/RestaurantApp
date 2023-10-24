@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Models\Recipes;
+namespace App\Http\Controllers\Searches;
+use App\Http\Controllers\Controller;
+use App\Models\Search;
 use Illuminate\Http\Request;
 
-class RecipesController extends Controller
+class SearchController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return 'search';
     }
 
     /**
@@ -34,7 +34,7 @@ class RecipesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Recipes $recipes)
+    public function show(Search $search)
     {
         //
     }
@@ -42,7 +42,7 @@ class RecipesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Recipes $recipes)
+    public function edit(Search $search)
     {
         //
     }
@@ -50,7 +50,7 @@ class RecipesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Recipes $recipes)
+    public function update(Request $request, Search $search)
     {
         //
     }
@@ -58,7 +58,7 @@ class RecipesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Recipes $recipes)
+    public function destroy(Search $search)
     {
         //
     }

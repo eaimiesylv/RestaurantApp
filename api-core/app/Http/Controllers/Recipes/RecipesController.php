@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Recipes;
+use App\Http\Controllers\Controller;
 
-use App\Models\Restaurant;
+use App\Models\Recipes;
 use Illuminate\Http\Request;
 
-class RestaurantController extends Controller
+class RecipesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return 'rec';
     }
 
     /**
@@ -34,7 +35,7 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Restaurant $restaurant)
+    public function show(Recipes $recipes)
     {
         //
     }
@@ -42,7 +43,7 @@ class RestaurantController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Restaurant $restaurant)
+    public function edit(Recipes $recipes)
     {
         //
     }
@@ -50,7 +51,7 @@ class RestaurantController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Restaurant $restaurant)
+    public function update(Request $request, Recipes $recipes)
     {
         //
     }
@@ -58,7 +59,7 @@ class RestaurantController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Restaurant $restaurant)
+    public function destroy(Recipes $recipes)
     {
         //
     }

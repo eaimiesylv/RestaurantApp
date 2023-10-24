@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Restaurants;
+use App\Http\Controllers\Controller;
 
-use App\Models\Search;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 
-class SearchController extends Controller
+class RestaurantController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return "restaurant";
     }
 
     /**
@@ -34,7 +35,7 @@ class SearchController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Search $search)
+    public function show(Restaurant $restaurant)
     {
         //
     }
@@ -42,7 +43,7 @@ class SearchController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Search $search)
+    public function edit(Restaurant $restaurant)
     {
         //
     }
@@ -50,7 +51,7 @@ class SearchController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Search $search)
+    public function update(Request $request, Restaurant $restaurant)
     {
         //
     }
@@ -58,7 +59,7 @@ class SearchController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Search $search)
+    public function destroy(Restaurant $restaurant)
     {
         //
     }
