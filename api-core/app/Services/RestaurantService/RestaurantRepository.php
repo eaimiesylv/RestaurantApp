@@ -9,7 +9,7 @@ class RestaurantRepository
     public function allRestaurants()
     {  
       
-        return Restaurant::all();
+        return Restaurant::paginate(20);
 
     }
     public function createRestaurant($all)
@@ -23,6 +23,12 @@ class RestaurantRepository
         $Restaurant->update($request);
         return $Restaurant;
         
+
+    }
+    public function showRestaurant($restaurant)
+    {
+    
+        return  Restaurant::find($restaurant);
 
     }
       

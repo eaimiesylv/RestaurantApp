@@ -15,11 +15,6 @@ class AuthFormRequest extends FormRequest
                 ];
      }
         
-     public function messages(): array
-     {
-         return [
-             'email.exists' => 'Invalid Credentials',
-         ];
-     }  
+     
     
 }

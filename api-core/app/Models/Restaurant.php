@@ -12,6 +12,7 @@ class Restaurant extends Model
         'name',
         'image',
         'city',
+        'address',
         'description',
         'opening_hours',
        

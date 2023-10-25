@@ -31,6 +31,12 @@ class RestaurantService
         
         return  $this->restaurantRepository->updateRestaurant($request, $restaurant);   
     }
+    public function showRestaurant($restaurant)
+    {
+    
+        return  $this->restaurantRepository->showRestaurant($restaurant);
+
+    }
    
    
 }

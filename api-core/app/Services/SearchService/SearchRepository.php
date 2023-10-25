@@ -1,27 +1,33 @@
 <?php
 
-namespace App\Services\UserService;
-use App\Models\User;
+namespace App\Services\SearchService;
+use App\Models\Search;
 
-class UserRepository
+class SearchRepository
 {
    
-    public function allUsers()
+    public function allsearches()
     {  
       
-        return User::all();
+        return Search::paginate(20);
 
     }
-    public function createUser($all)
+    public function createSearch($all)
     {  
 
-        return User::create($all);
+        return Search::create($all);
 
     }
-    public function updateUser($request, $user){
+    public function updateSearch($request, $search){
         
-        $user->update($request);
-        return $user;
+        $search->update($request);
+        return $search;
+        
+
+    }
+    public function showSearch($search){
+        
+       return Search::find($search);
         
 
     }

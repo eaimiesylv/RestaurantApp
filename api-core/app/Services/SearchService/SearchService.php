@@ -15,15 +15,15 @@ class SearchService
         $this->searchRepository = $searchRepository;
 
     }
-    public function allSearchs()
+    public function allSearches()
     {
     
-        return $this->searchRepository->allSearchs();
+        return $this->searchRepository->allSearches();
 
     }
     public function createSearch(array $all)
     {
-    
+       
         return $this->searchRepository->createSearch($all);
 
     }
@@ -31,6 +31,11 @@ class SearchService
         
         return  $this->searchRepository->updateSearch($request, $search);   
     }
-   
+    public function showSearch($search)
+    {
+    
+        return  $this->searchRepository->showSearch($search);
+
+    }
    
 }

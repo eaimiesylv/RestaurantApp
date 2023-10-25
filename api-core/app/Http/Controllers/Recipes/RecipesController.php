@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Recipes;
 use App\Http\Controllers\Controller;
-
 use App\Models\Recipes;
 use Illuminate\Http\Request;
 use App\Http\Requests\RecipesFormRequest;
@@ -20,19 +19,18 @@ class RecipesController extends Controller
     public function index()
     {
        
-        return  $this->recipeService->allRecipe();
+        return  $this->recipeService->allRecipes();
     }
 
     public function store(RecipesFormRequest $request)
     {
-      
+       
         return  $this->recipeService->createRecipe($request->all());
 
     }
 
-    public function show(Recipe $recipe)
+    public function show(Recipes $recipe)
     {
-    
         return  $this->recipeService->showRecipe($recipe);
 
     }

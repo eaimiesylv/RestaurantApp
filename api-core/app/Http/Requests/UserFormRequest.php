@@ -44,7 +44,7 @@ class UserFormRequest extends FormRequest
         {
            
             $user = $this->route('users.update');
-            dd($user->data);
+        
             $rules += [
                 'email' => [
                     'required',

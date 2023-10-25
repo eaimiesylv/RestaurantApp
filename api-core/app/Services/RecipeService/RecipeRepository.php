@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Services\RecipeService;
-use App\Models\Recipe;
+use App\Models\Recipes;
 
 class RecipeRepository
 {
@@ -9,18 +9,25 @@ class RecipeRepository
     public function allRecipes()
     {  
       
-        return Recipe::all();
+        return Recipes::paginate(20);
 
     }
     public function createRecipe($all)
     {  
-
-        return Recipe::create($all);
+       
+        return Recipes::create($all);
 
     }
-    public function updateRecipe($request, $Recipe){
+    public function showRecipe($recipe){
         
-        $Recipe->update($request);
+       
+        return Recipes::find($recipe);
+        
+
+    }
+    public function updateRecipe($request, $recipe){
+        
+        $recipe->update($request);
         return $user;
         
 

@@ -15,26 +15,14 @@ class AuthService
         $this->authRepository = $authRepository;
 
     }
-    public function allAuths()
+  
+    public function authenticateUser(array $user)
     {
     
-        return $this->authRepository->allAuths();
+        return $this->authRepository->authenticateUser($user);
 
     }
-    public function showAuth($auth){
-
-        return  $this->authRepository->showAuth($auth);
-    }
-    public function createAuth(array $all)
-    {
     
-        return $this->authRepository->createAuth($all);
-
-    }
-    public function updateAuth($request, $auth){
-        
-        return  $this->authRepository->updateAuth($request, $auth);   
-    }
    
    
 }

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Services\RecipeService;
-use App\Services\RecipeRepository\RecipeRepository;
+use App\Services\RecipeService\RecipeRepository;
 
 
 
@@ -31,6 +31,10 @@ class RecipeService
         
         return  $this->recipeRepository->updateRecipe($request, $Recipe);   
     }
-   
+    public function showRecipe($recipe){
+
+        return  $this->recipeRepository->showRecipe($recipe);
+    }
+    
    
 }

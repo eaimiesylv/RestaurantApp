@@ -11,8 +11,8 @@ class Recipes extends Model
     protected $fillable = [
         'name',
         'image',
-        'description',
-        'calories_cost',
+        'instruction',
+        'calories_count',
         'cost'
     ];
 }

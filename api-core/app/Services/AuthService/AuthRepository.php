@@ -2,33 +2,37 @@
 
 namespace App\Services\AuthService;
 use App\Services\AuthService\AuthRepository;
-use App\Models\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class AuthRepository
 {
    
-    public function allAuths()
+   
+    public function authenticateUser($request)
     {  
-      
-        return Auth::all();
+            
+              $user = User::where('email', $request['email'])->first();
+              if(!$user){
+                return response()->json(['errors' => 'User not found'], 401);
+              }
+              
+              if ($user->status === 'inactive') {
+                return response()->json(['errors' => 'Your account is inactive'], 403);
+              }
+              if(!Hash::check($request['password'],$user->password)){
+                   
+                 return response()->json(['errors' => 'Wrong credentials'], 403);
+              } 
+              $data= [
+                'token'=>$user->createToken('api-token')->plainTextToken,
+                'data' => $user
+              ];
+              return response()->json(['success' => $data], 401);
 
     }
-    public function createAuth($all)
-    {  
-
-        return Auth::create($all);
-
-    }
-    public function showAuth($Auth){
-
-         return Auth::find($Auth);
-    }
-    public function updateAuth($request, $Auth){
-        
-        $Auth->update($request);
-        return $user;
-        
-
-    }
+   
       
 }
