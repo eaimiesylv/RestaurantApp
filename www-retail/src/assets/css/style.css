@@ -1,0 +1,312 @@
+body {
+    /* padding-top: 2rem; */
+    font-family: Times New Roman, Arial;
+}
+/* MILAN DETAIL MEDICS - mdm*/
+@font-face {
+    font-family: roboto;
+    src: url(../../assets/fonts/Roboto/Roboto-Bold.ttf);
+ }
+.roboto-font {
+    font-family: roboto;
+}
+a { text-decoration: none;}
+a:hover { text-decoration: underline;}
+h2 {
+    font-family: Times New Roman, Arial;
+    font-weight: bold;
+    font-size: 3.75rem;
+}
+h4 {
+    font-family: Times New Roman, Arial;
+    font-weight: bold;
+    font-size: 2.125rem;
+}
+p {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #676565;
+}
+button, label, header, ul.nav a, .font-style01 { font-family: Helvetica Neue, Helvetica, sans-serif!important; }
+a {
+    color: #02A0AC;
+    cursor: pointer;
+}
+.mdm-color01, .active {
+    color: #02A0AC!important;
+}
+.mdm-color02 {
+    color: #676565;
+}
+.mdm-color03 {
+    color:#efb681;
+}
+.mdm-color04 {
+    color:#3B5998;
+}
+.mdm-color04 {
+    color: #3B5998;
+}
+.mdm-color05 {
+    color: #0A2656;
+}
+a.nav-link:hover {
+    color: #02A0AC!important;
+    text-decoration: none;
+}
+.mdm-bg-white {
+    background-color: #fff;
+    color: #02A0AC;
+}
+.mdm-bg-white:hover {
+    background-color: #02A0AC;
+    color: #fff;
+}
+.mdm-bg-color01, .mdm-bg-color01a {
+    background-color: #02A0AC;
+    color: #fff;
+}
+.mdm-bg-color01a a {
+    color: #fff;
+}
+.mdm-bg-color01:hover {
+    background-color: #fff;
+    color: #02A0AC;
+}
+.mdm-bg-color01a:hover {
+    background-color: #fff;
+    color: #02A0AC;
+    border: 1px solid #02A0AC!important;
+}
+.mdm-bg-color01a:hover a {
+    color: #02A0AC;
+}
+.mdm-bg-color02 {
+    background-color: #f1f1ec;
+}
+.mdm-bg-color03 {
+    background-color: #fcecd5;
+}
+.mdm-bg-color04 {
+    background-color:#3B5998;
+}
+.mdm-bg-color05 {
+    background-color:#F5F6F7;
+}
+.mdm-bg-color06 {
+    background-color: #3B5998;
+}
+.mdm-bg-color06 {
+    background-color: #DE8A3C;
+}
+
+.border-style01 {
+    border: 1px solid #02A0AC;
+}
+.border-style02 {
+    border: 1px solid #c2d3d4;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #DE8A3C;
+}
+
+/* Sing In */
+.signin-main {
+    background: url(../../assets/BG-signIn-yellowCar.png) no-repeat;
+    background-size: cover;
+    padding-top: -2rem;
+}
+.signin-main h1 {
+    font-size: 1.9rem;
+}
+.signin-main label {
+    font-size: 1rem;
+    color: #676565;
+}
+.signin-main input, .input-group-text {
+    border: 2px solid #E6E6E6;
+}
+.signin-main .txt01 {
+    font-size: 0.8rem;
+}
+.signin-main a {text-decoration: underline;}
+.signin-main a:hover {text-decoration:  none;}
+.divider {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    color: #6D6D6D;
+  }
+.divider::before, .divider::after {
+    flex: 1;
+    content: '';
+    padding: 0.5px;
+    background-color: #E6E6E6;
+    margin: 5px;
+  }
+  .signin-main .g-link, .sign-up-main .g-link {
+    color: #333333;
+    border: 1px solid #CCCCCC!important;
+  }
+  .signin-main .mdm-bg-color01:hover, .sign-up-main .mdm-bg-color01:hover {
+    background-color: #fff;
+    color: #02A0AC;
+    border: 1px solid #02A0AC!important;
+}
+  /* Sign Up */
+  .sign-up-main {
+    background: url(../../assets/BG-sign-up.png) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+
+/* Home / Index */
+
+/* Header Banner Image */
+.header-bg-img {
+    background: url(../../assets/BGHeaderImg_001.png) no-repeat center center;
+    background-size: cover;
+}
+.header-img {
+    background: url(../../assets/HandWithPhone.png) no-repeat right bottom;
+    background-size: contain;
+}
+
+/* About us - index */
+.about-us-main {
+    background: url(../../assets/Car_Img_aboutUS.png) no-repeat left bottom;
+    background-size: 55%;
+}
+
+/* Our Services */
+#our-services .card:hover {
+    background: #02A0AC;
+    box-shadow: 0px 3px 6px #00000029;
+    color: #fff;
+    border-radius: 0!important;
+}
+#our-services .card:hover a, #our-services .card:hover p {
+    color: #fff!important;
+}
+#our-services .card:hover img {
+    filter: brightness(10);
+}
+#our-services a.card-link {
+    /* background-color: #E6E6E6; */
+    font-family: Helvetica Neue, Helvetica, sans-serif!important;
+    text-decoration: none;
+}
+#our-services .card:hover .arrow-link01 {
+    background-color: #44c3cc;
+}
+#our-services .card:hover svg {
+    fill: #fff;
+}
+.arrow-link01 {
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+/* Our Pricing */
+.pricing-list {
+    min-height: 230px;
+}
+
+/* compare plans */
+.compare-plans {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+.compare-plans .text-style01 {
+    font-size: 2.375rem;
+}
+.compare-plans .text-style02 {
+    font-size: 1.75rem;
+}
+.compare-plans tr.table-text01 td {
+    font-size: 1.125rem;
+    color: #5A5A5A;
+}
+
+/* FAQ */
+.faq-main {
+    background: url(../../assets/FAQ_bg.png) no-repeat;
+    background-size: cover;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    transform: scale(0.75) !important;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+
+.accordion-item:first-of-type {
+    border: 40%!important;
+}
+.accordion-item {
+    border: 40%!important;
+}
+.question-mark {
+    background: #02A0AC;
+    border-radius: 50%;
+}
+
+/* contact us */
+#contact-us-main {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+#contact-us-main h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: Times New Roman, Arial;
+}
+.contact-us-form {
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    opacity: 0.99;
+}
+
+/* From Clients - Testimonial */
+.from-clients {
+    background:  #000;
+}
+
+/* Footer */
+.footer-main a {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+.footer-rights-text {
+    font-size: 1rem;
+}
+
+
+/* media queries */
+@media(max-width: 768px) {
+    body {
+        padding-top: 11rem;
+    }
+    .pricing-list {
+        min-height: auto;
+    }
+    .text-style01 {
+        font-size: 1.5rem!important;
+    }
+}
+
+/* For Testing - can delete it */
+.red-border {
+    border: 1px solid #f00!important;
+}
+.reg-bg {
+    background-color: #f00!important;
+}
