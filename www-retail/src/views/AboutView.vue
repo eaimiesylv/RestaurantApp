@@ -103,6 +103,7 @@ export default {
 </script>
 
 <style>
+
 /* style the page layout*/
 #container {
   display: grid;
@@ -113,12 +114,12 @@ export default {
       "footer footer";
   height: 100vh;
   margin: 0;
-  overflow-y: hidden; /* Hide any overflowing content */
+  overflow-y: hidden; 
 }
 
 .sidebar {
   
-  max-height: calc(100vh - 30px); /* Adjust the height based on your layout */
+  max-height: calc(100vh - 30px); 
   overflow-y: auto;
   background-color: #0F5298;
   padding:0 1em;
@@ -130,7 +131,7 @@ main{
   grid-area:main;
   background-color: #f0f0f0;
   padding:1.5em;
-  max-height: calc(100vh - 30px); /* Adjust the height based on your layout */
+  max-height: calc(100vh - 30px); 
   overflow-y: auto;
 }
 section{
