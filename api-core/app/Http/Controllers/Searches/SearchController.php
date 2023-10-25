@@ -4,62 +4,36 @@ namespace App\Http\Controllers\Searches;
 use App\Http\Controllers\Controller;
 use App\Models\Search;
 use Illuminate\Http\Request;
+use App\Services\SearchService\SearchService;
+use App\Http\Requests\SearchFormRequest;
 
 class SearchController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected SearchService $searchService;
+
+    public function __construct(SearchService $searchService)
+    {
+       
+        $this->searchService = $searchService;
+    }
     public function index()
     {
-        return 'search';
+       
+        return  $this->searchService->allSearches();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(SearchFormRequest $request)
     {
-        //
+      
+        return  $this->searchService->createSearch($request->all());
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(Search $search)
     {
-        //
-    }
+    
+        return  $this->searchService->showSearch($search);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Search $search)
-    {
-        //
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Search $search)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Search $search)
-    {
-        //
-    }
+   
 }

@@ -5,62 +5,35 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Recipes;
 use Illuminate\Http\Request;
+use App\Http\Requests\RecipesFormRequest;
+use App\Services\RecipeService\RecipeService;
 
 class RecipesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected RecipeService $recipeService;
+
+    public function __construct(RecipeService $recipeService)
+    {
+       
+        $this->recipeService = $recipeService;
+    }
     public function index()
     {
-        return 'rec';
+       
+        return  $this->recipeService->allRecipe();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(RecipesFormRequest $request)
     {
-        //
+      
+        return  $this->recipeService->createRecipe($request->all());
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function show(Recipe $recipe)
     {
-        //
-    }
+    
+        return  $this->recipeService->showRecipe($recipe);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Recipes $recipes)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Recipes $recipes)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Recipes $recipes)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Recipes $recipes)
-    {
-        //
     }
 }

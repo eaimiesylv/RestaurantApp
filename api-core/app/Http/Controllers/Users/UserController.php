@@ -4,62 +4,45 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserFormRequest;
+use App\Services\UserService\UserService;
+
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected UserService $userService;
+
+    public function __construct(UserService $userService)
+    {
+       
+        $this->userService = $userService;
+    }
     public function index()
     {
-        return 'users';
+       
+        return  $this->userService->allUsers();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(UserFormRequest $request)
     {
-        //
+      
+        return  $this->userService->createUser($request->all());
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(User $user)
     {
-        //
+    
+        return  $this->userService->showUser($user);
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(User $user)
+    public function update(UserFormRequest $request, User $user)
     {
-        //
+        //$request->validated();
+        return  $this->userService->updateUser($request->all(), $user);
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, User $user)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(User $user)
-    {
-        //
-    }
+   
 }

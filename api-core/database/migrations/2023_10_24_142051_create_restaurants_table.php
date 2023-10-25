@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('image', 100);
             $table->string('name', 100);
-            $table->string('description', 100);
+            $table->string('city', 100);
+            $table->string('description', 500);
             $table->string('address', 100);
             $table->string('opening_hours', 100);
             $table->timestamps();

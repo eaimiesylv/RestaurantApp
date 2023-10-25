@@ -5,62 +5,36 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use App\Http\Requests\RestaurantFormRequest;
+use App\Services\RestaurantService\RestaurantService;
 
 class RestaurantController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected RestaurantService $restaurantService;
+
+    public function __construct(RestaurantService $restaurantService)
+    {
+       
+        $this->restaurantService = $restaurantService;
+    }
     public function index()
     {
-        return "restaurant";
+       
+        return  $this->restaurantService->allRestaurants();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(RestaurantFormRequest $request)
     {
-        //
+      
+        return  $this->restaurantService->createRestaurant($request->all());
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(Restaurant $restaurant)
     {
-        //
-    }
+    
+        return  $this->restaurantService->showRestaurant($restaurant);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Restaurant $restaurant)
-    {
-        //
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Restaurant $restaurant)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Restaurant $restaurant)
-    {
-        //
-    }
+   
 }

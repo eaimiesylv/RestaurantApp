@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'fullname',
+        'phone_number',
+        'status'
     ];
 
     /**
@@ -42,4 +45,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public static function boot(){
+
+        parent::boot();
+        static::creating(function($user){
+            $request = app('request');
+            $userDetail=[];
+            if ($request->has('password')) {
+                $hashedPassword = bcrypt($request->input('password'));
+                $userDetail['password'] = $hashedPassword;
+            }
+            $user->fill($userDetail);
+        });
+       
+        
+    }
 }

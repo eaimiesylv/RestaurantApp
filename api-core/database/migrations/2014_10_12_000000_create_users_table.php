@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email', 200)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('status')->default(1)->comment("0 inactive, 1 active");
             $table->rememberToken();
             $table->timestamps();
         });
@@ -29,5 +30,14 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+    }
+    public function getStatusAttribute($value){
+        switch($value){
+            case 0:
+                return "inactive";
+            default:
+                return "active";
+        }
+
     }
 };

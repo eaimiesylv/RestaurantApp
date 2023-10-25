@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image', 100);
             $table->string('name', 100);
-            $table->string('instruction', 100);
+            $table->longText('instruction');
             $table->string('calories_count', 100);
             $table->string('cost', 100);
             $table->timestamps();
