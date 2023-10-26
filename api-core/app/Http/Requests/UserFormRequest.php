@@ -23,6 +23,7 @@ class UserFormRequest extends FormRequest
             'phone_number' => [
                 'required',
                 'max:15',
+                'unique:users,phone_number',
             ],
            
         ];
@@ -36,6 +37,12 @@ class UserFormRequest extends FormRequest
                     'email',
                     'unique:users,email',
                     'max:255',
+                ],
+                'password' => [
+                    'required',
+                    'string',
+                    'max:40',
+                    'min:8'
                 ],
             ];
         }

@@ -15,7 +15,8 @@ class UserRepository
     public function createUser($all)
     {  
 
-        return User::create($all);
+       return  User::create($all);
+        
 
     }
     public function showUser($user){

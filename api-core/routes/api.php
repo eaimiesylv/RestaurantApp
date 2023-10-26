@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['prefix' => 'v1/'], function () {
-        Route::post('/login', [App\Http\Controllers\Users\AuthController::class, 'store']);
-    // Route::put('/log-out', [App\Http\Controllers\Users\AuthController::class, 'destory']);
+    Route::post('/login', [App\Http\Controllers\Users\AuthController::class, 'store']);
+    Route::delete('/log-out', [App\Http\Controllers\Users\AuthController::class, 'destroy']);
     Route::post('/registers', [App\Http\Controllers\Users\UserController::class, 'store'])->name('register');
     
   

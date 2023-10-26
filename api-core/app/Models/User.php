@@ -23,6 +23,7 @@ class User extends Authenticatable
         'password',
         'fullname',
         'phone_number',
+		'role',
         'status'
     ];
 
@@ -62,5 +63,8 @@ class User extends Authenticatable
     }
     public function getStatusAttribute($value){
         return $value ===1 ? "active": "inactive";
+    }
+	 public function getRoleAttribute($value){
+        return $value ===1 ? "admin": "user";
     }
 }

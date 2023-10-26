@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->string('image', 100);
+            $table->string('image', 100)->default("no image");
             $table->string('name', 100);
             $table->longText('instruction');
             $table->string('calories_count', 100);

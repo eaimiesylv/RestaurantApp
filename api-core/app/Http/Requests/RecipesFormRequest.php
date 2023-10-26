@@ -18,8 +18,8 @@ class RecipesFormRequest extends FormRequest
             'image' => 'required|string|max:100',
             'name' => 'required|string|max:100',
             'instruction' => 'required|string',
-            'calories_count' => 'required|string|max:100',
-            'cost' => 'required|string|max:100',
+            'calories_count' => 'required|integer|max:100',
+            'cost' => 'required|integer|max:100',
         ];
     }
 

@@ -28,7 +28,10 @@ class UserService
     public function createUser(array $all)
     {
     
-        return $this->userRepository->createUser($all);
+        $user=$this->userRepository->createUser($all);
+        if ($user) {
+            return response()->json(['success' => 'Registration ok. Please login'], 200);
+        }
 
     }
     public function updateUser($request, $user){
