@@ -2,8 +2,8 @@ import axios from 'axios';
 
 
 
-// const appURL ="https://mds-dev-01.azurewebsites.net/api/v1"
-const appURL = 'http://localhost:8000/api/v1'
+const appURL ="https://foodapp.majestylearningfields.com/api/v1"
+// const appURL = 'http://localhost:8000/api/v1'
 const http = axios.create({
   baseURL: appURL,
     headers: {
