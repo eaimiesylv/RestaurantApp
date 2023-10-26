@@ -153,3 +153,25 @@ The restaurant endpoint has not been consumed
 
         password: 12345678
     }
+
+**ScreenShot**
+
+
+Register page
+
+![register](https://github.com/eaimiesylv/RestaurantApp/assets/50324524/7f17b362-5683-4b52-967e-ee9f2e1b7c3b)
+
+Login Page
+
+![login page](https://github.com/eaimiesylv/RestaurantApp/assets/50324524/cf28dffc-8a43-44e7-9b8a-888225567df9)
+
+
+Add recipe
+
+![add receipe](https://github.com/eaimiesylv/RestaurantApp/assets/50324524/bf72b2d4-a1c3-470a-8af9-5c7cbfb3162c)
+
+View recipe
+![reciep page](https://github.com/eaimiesylv/RestaurantApp/assets/50324524/10d5e35f-98b0-4bf4-b68d-0dd3251371be)
+
+
+
