@@ -2,12 +2,21 @@
   <div id="container">
     <aside class="sidebar" v-show="asideVisible">
       <!-- Your sidebar content -->
+   
       <img src="@/assets/milan.png" alt="milanDigitalMedicsLogo" class="img-fluid" />
-      <ul>
-          <li>Services</li>
-          <li>Location</li>
+      <ul class="nav flex-column">
+            <li class="nav-item">
+              <router-link to="/recipe" class="btn btn-warning mt-3">Recipe</router-link>
+             
+            </li>
+            <li class="nav-item">
+              <router-link to="/add-recipe" class="btn btn-warning mt-3">Add Recipe</router-link>
 
-      </ul>
+            </li>
+           
+          
+          
+          </ul>
      
     </aside>
 
@@ -18,10 +27,14 @@
       </header>
 
       <section>
-         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, dolorum recusandae quisquam rem sed suscipit nostrum facere eligendi placeat sunt temporibus saepe culpa modi eveniet maxime pariatur ipsa, officiis a?
-        <slot></slot>
+          <slot></slot>
       </section>
-      <footer>ok</footer>
+      
+      <footer>
+       
+
+
+      </footer>
     </main>
 
    
@@ -30,7 +43,9 @@
 <script setup>
    import headerComponent from '@/components/HeaderComponent.vue';
    import { ref, onMounted, onBeforeUnmount } from "vue";
+   import { useHttpMethods } from '@/composable/httpMethods';
   const asideVisible = ref(true);
+ 
   const toggle= ()=>{
     asideVisible.value = !asideVisible.value;
   }
@@ -38,7 +53,9 @@
   asideVisible.value = window.innerWidth > 768;
 };
 
-onMounted(() => {
+
+onMounted( async () => {
+  
   handleResize(); 
   window.addEventListener('resize', handleResize);
 });
@@ -51,17 +68,18 @@ onBeforeUnmount(() => {
 
 #container {
   display: flex;
-  padding:1em;
+  padding:1em 0;
 }
 
 aside {
-  width: 15%; 
+  width:min-content;
   height:100vh;
-  border-style:solid;
+  padding:1em
 }
 
 main {
   flex-grow:1;
+  
  
 }
 header{
@@ -69,11 +87,40 @@ header{
 }
 section{
   min-height:90vh;
+  background:#FAFAFA;
+  padding:1em;
 }
 footer {
   background:black;
 }
+ul {
+  white-space: nowrap;
+  /* overflow: hidden; 
+  text-overflow: ellipsis;  */
+}
+div{
+  margin:0;
+  padding:0;
+ }
+.card{
+  padding:0;
+  margin: 0;
+  border-style:solid;
+  width:49%; 
+  margin:0.5%
+}
+h5:nth-child(2){
+  margin-left:auto;
+}
+@media (max-width: 768px) {
+  .card{
+    border-style:solid;
+    width:99%; 
+    margin:0.5%
+ }
+}
 @media (max-width: 768px) {
  
+
 }
 </style>
